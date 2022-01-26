@@ -17,6 +17,6 @@ if (options.level === 'debug') {
 }
 
 // Create and export a Pino Logger instance:
-logger.info('Test');
+logger.info(version, author);
 // https://getpino.io/#/docs/api?id=logger
 module.exports = require('pino')(options);
