@@ -7,7 +7,7 @@ const helmet = require('helmet');
 const compression = require('compression');
 
 // version and author from our package.json file
-const { version, author } = require('../package.json');
+//const { version, author } = require('../package.json');
 
 const authorization = require('./authorization');
 const logger = require('./logger');
