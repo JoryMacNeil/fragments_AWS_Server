@@ -42,7 +42,7 @@ jobs:
       - name: Run ESLint
         run: npm run lint
 
-          unit-tests:
+       unit-tests:
     name: Unit Tests
     runs-on: ubuntu-latest
     steps:
@@ -64,5 +64,5 @@ jobs:
         # - npm test
         #
         # 2. Use `install-ci-test` to do it in a single command, see https://docs.npmjs.com/cli/v8/commands/npm-install-ci-test
-        # run: npm install-ci-test
+        # run: npm install-ci-tes
         run: npm install-ci-test
