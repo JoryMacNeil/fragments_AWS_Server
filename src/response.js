@@ -27,7 +27,7 @@ module.exports.createSuccessResponse = function (data) {
  *   }
  * }
  */
-module.exports.createErrorResponse = function (code, message) {
+module.exports.createErrorResponse = function () {
   return {
     status: 'error',
     error: {
