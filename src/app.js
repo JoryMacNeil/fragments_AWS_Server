@@ -5,12 +5,12 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const compression = require('compression');
-
-// version and author from our package.json file
-//const { version, author } = require('../package.json');
-
 const authorization = require('./authorization');
+// version and author from our package.json file
+const { version, author } = require('../package.json');
+
 const logger = require('./logger');
+const { createErrorResponse } = require('./response');
 const pino = require('pino-http')({
   // Use our default logger instance, which is already configured
   logger,
@@ -45,7 +45,7 @@ app.use(compression());
 app.use('/', require('./routes'));
 
 // Add 404 middleware to handle any requests for resources that can't be found can't be found
-/*app.use((req, res) => {
+app.use((req, res) => {
   res.status(404).json({
     status: 'error',
     error: {
@@ -54,16 +54,6 @@ app.use('/', require('./routes'));
     },
   });
 });
-*/
-module.exports.createErrorResponse = function () {
-  return {
-    status: 'error',
-    error: {
-      code: 404,
-      message: 'not found',
-    },
-  };
-};
 
 // Add error-handling middleware to deal with anything else
 // eslint-disable-next-line no-unused-vars

@@ -27,12 +27,12 @@ module.exports.createSuccessResponse = function (data) {
  *   }
  * }
  */
-module.exports.createErrorResponse = function () {
+module.exports.createErrorResponse = function (code, message) {
   return {
     status: 'error',
     error: {
-      code: 404,
-      message: 'not found',
+      code,
+      message,
     },
   };
 };
