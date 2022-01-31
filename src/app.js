@@ -7,10 +7,10 @@ const helmet = require('helmet');
 const compression = require('compression');
 const authorization = require('./authorization');
 // version and author from our package.json file
-const { version, author } = require('../package.json');
+//const { version, author } = require('../package.json');
 
 const logger = require('./logger');
-const { createErrorResponse } = require('./response');
+//const { createErrorResponse } = require('./response');
 const pino = require('pino-http')({
   // Use our default logger instance, which is already configured
   logger,
