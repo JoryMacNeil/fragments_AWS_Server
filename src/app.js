@@ -10,6 +10,7 @@ const authorization = require('./authorization');
 //const { version, author } = require('../package.json');
 
 const logger = require('./logger');
+const { createErrorResponse } = require('./response');
 //const { createErrorResponse } = require('./response');
 const pino = require('pino-http')({
   // Use our default logger instance, which is already configured
@@ -45,16 +46,22 @@ app.use(compression());
 app.use('/', require('./routes'));
 
 // Add 404 middleware to handle any requests for resources that can't be found can't be found
-app.use((req, res) => {
-  res.status(404).json({
-    status: 'error',
-    error: {
-      message: 'not found',
-      code: 404,
-    },
-  });
+app.use((req, res, next) => {
+  res.status(404).json(
+    createErrorResponse({
+      status: 'error',
+      error: {
+        message: 'not found',
+        code: 404,
+      },
+    })
+  );
 });
 
+//app.use((req, res, next) => {
+// next(createErrorResponse(code, message));
+// res.status(404);
+//});
 // Add error-handling middleware to deal with anything else
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
