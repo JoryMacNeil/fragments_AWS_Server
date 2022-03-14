@@ -48,7 +48,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: hadolint/hadolint-action@v1.6.0
         with:
-        dockerfile: Dockerfile
+          dockerfile: Dockerfile
 
   unit-tests:
     name: Unit Tests
