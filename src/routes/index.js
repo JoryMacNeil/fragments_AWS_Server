@@ -30,7 +30,7 @@ router.get('/', (req, res) => {
       author: 'JoryMacneil',
       // Use your own GitHub URL for this...
       githubUrl: 'https://github.com/jorymacneil/fragments',
-      version: '0.0.1',
+      version: '0.7.0',
     })
   );
 });
