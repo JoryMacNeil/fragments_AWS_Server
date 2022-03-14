@@ -27,9 +27,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-      uses: actions/checkout@v2
+        uses: actions/checkout@v2
       - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1
+        uses: docker/setup-buildx-action@v1
         # NOTE: ending and restarting the Learner Lab will void these secrets,
         # update them i you are doing this during a new session:
         # `Error: The security token included in the request is expired`
