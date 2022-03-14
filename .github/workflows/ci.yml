@@ -41,7 +41,7 @@ jobs:
 
       - name: Run ESLint
         run: npm run lint
-gidockerfile-lint:
+dockerfile-lint:
     name: Dockerfile Lint
     runs-on: ubuntu-latest
     steps:
