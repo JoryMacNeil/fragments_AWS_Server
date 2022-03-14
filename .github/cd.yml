@@ -13,11 +13,12 @@
 name: cd
 
 on:
+  pull_request:
+    branches:
+      - master
   push:
-    # Whenever a new tag is pushed
-    tags:
-      # Any tag starting with v... should trigger this workflow.
-      - 'v**'
+    branches:
+      - master
 
 jobs:
   # NOTE: this assumes our CI jobs have already passed previously
