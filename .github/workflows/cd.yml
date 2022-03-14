@@ -28,6 +28,7 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v2
+        
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
         # NOTE: ending and restarting the Learner Lab will void these secrets,
@@ -44,8 +45,9 @@ jobs:
 
         # Login to our ECR repository using the configured credentials
       - name: Login to Amazon ECR
-            id: login-ecr
+        id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
+
       - name: Build and push to Amazon ECR
         env:
           # Define an Environment Variable with our ECR Registry, getting
