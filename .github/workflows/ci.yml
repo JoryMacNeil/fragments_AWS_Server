@@ -41,7 +41,7 @@ jobs:
 
       - name: Run ESLint
         run: npm run lint
-   dockerfile-lint:
+  dockerfile-lint:
     name: Dockerfile Lint
     runs-on: ubuntu-latest
     steps:
@@ -51,7 +51,7 @@ jobs:
         with:
           dockerfile: Dockerfile
 
-     unit-tests:
+  unit-tests:
       name: Unit Tests
       runs-on: ubuntu-latest
      steps:
@@ -75,7 +75,7 @@ jobs:
         # 2. Use `install-ci-test` to do it in a single command, see https://docs.npmjs.com/cli/v8/commands/npm-install-ci-test
         # run: npm install-ci-test
         run: npm install-ci-test
-   docker-hub:
+  docker-hub:
     name: Build and Push to Docker Hub
    # Don't bother running this job unless the other three all pass
     needs: [lint, dockerfile-lint, unit-tests]
