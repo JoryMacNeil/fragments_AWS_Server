@@ -18,7 +18,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JoryMacNeil/fragments.git"
-  
   },
   "author": "JoryMacneil",
   "license": "UNLICENSED",
@@ -45,6 +44,7 @@
     "pino": "^7.6.3",
     "pino-http": "^6.5.0",
     "pino-pretty": "^7.3.0",
-    "stoppable": "^1.1.0"
+    "stoppable": "^1.1.0",
+    "yarn": "^1.22.17"
   }
 }
