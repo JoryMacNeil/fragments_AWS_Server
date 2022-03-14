@@ -1,7 +1,7 @@
 # Continuous Delivery Workflow
 #
 # This should happen whenever we push a new tag, and we tag an existing
-# commit after we know it's good (e.g., has been tested).
+# commit after we know it's goo (e.g., has been tested).
 #
 # To create a new tag, we also need to update the package.json version:s
 #
@@ -28,7 +28,7 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v2
-        
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
         # NOTE: ending and restarting the Learner Lab will void these secrets,
