@@ -25,7 +25,7 @@ jobs:
   aws:
     name: AWS
     runs-on: ubuntu-latest
-     steps:
+   steps:
       - name: Check out code
         uses: actions/checkout@v2
         # Use buildx, which is faster and can optimize the build steps
